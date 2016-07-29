@@ -1,0 +1,16 @@
+#include <iostream>
+
+{% for i in nums %}extern int function{{ i }}(int a, int b);
+{% endfor %}
+
+int main(int argc, char** argv)
+{
+    int a = 0;
+    {% for i in nums %}a += function{{ i }}({{ i }}, {{ i }} + 1);
+    {% endfor %}
+
+    std::cout << a << std::endl;
+
+    return 0;
+}
+

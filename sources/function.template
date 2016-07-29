@@ -1,0 +1,13 @@
+#include <vector>
+
+struct type{{ i }} {
+    int v;
+};
+
+int function{{ i }}(int a, int b){
+    std::vector< type{{ i }} > c;
+    c.push_back( {a} );
+    c.push_back( {b} );
+    return c[0].v + c[1].v;
+}
+
